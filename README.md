@@ -1,5 +1,7 @@
 # Realtime Tic Tac Toe Game in React Native 
 
+⚠️ This tutorial is out of date: While some information may not be completely up to date, this repository still contains some useful insights into developing a React Native application. You can learn more about how PubNub powers [thousands of customers worldwide](https://www.pubnub.com/customers/) in our [PubNub for Developers](https://www.pubnub.com/developers/) resources. Have suggestions or questions about the content of this post? Reach out to devrel@pubnub.com.
+
 A React Native game that lets players play Tic Tac Toe against each other in this classic childhood game. Any moves the player makes will be seen in realtime by the other player, no matter where they are in the world! [PubNub's React SDK](https://www.pubnub.com/docs/react-native-javascript/pubnub-javascript-sdk) is used to power the realtime infrastructure of the game and to provide a connected shared experience for the players. 
 
 <p align="center">
@@ -7,11 +9,7 @@ A React Native game that lets players play Tic Tac Toe against each other in thi
 </p>
 
 ## Setup
-1) First things first, sign up for a free PubNub account to get your Pub/Sub API keys.
- <a href="https://dashboard.pubnub.com/signup?devrel_gh=react-native-tictactoe">
-    <img alt="PubNub Signup" src="https://i.imgur.com/og5DDjf.png" width=260 height=97/>
-  </a>
-
+1) To get started, create your [PubNub account](https://admin.pubnub.com/#/register) to get your Pub/Sub API Keys.
 2) You need to enable presence to detect the number of people in the game channel, which prevents having more than two people in a game. To do so, go to your [PubNub Admin Dashboard](https://admin.pubnub.com), click on the Demo Project App, or create a new app for this project, and click on Keyset. Scroll down to Application add-ons and toggle the Presence switch to on. Keep the default values the same.
 
 <p align="center">
@@ -20,9 +18,9 @@ A React Native game that lets players play Tic Tac Toe against each other in thi
 
 3) Clone the repo.
 ```bash
-git clone https://github.com/ocastroa/react-native-tictactoe
+git clone https://github.com/PubNubDevelopers/react-native-tictactoe.git
 ```
-4) Open the project in your favorite text editor, such as [VS Code](https://code.visualstudio.com/download) or [Notepad++](https://notepad-plus-plus.org/download/v7.6.4.html)
+4) Open the project in your favorite text editor, such as [VS Code](https://code.visualstudio.com/download) or [Notepad++](https://notepad-plus-plus.org/download/)
 
 5) Go to App.js and replace 'ENTER_YOUR_PUBLISH_KEY_HERE' and 'ENTER_YOUR_SUBSCRIBE_KEY_HERE' with the keys you got from Step 1.
 
@@ -42,11 +40,9 @@ react-native run-ios
 react-native run-android
 ```
 
-8) There are two ways to test the app without having to open up another simulator/emulator. You can use PubNub's debug console or a React tic tac toe app:
-    1) The debug console is used to create a game channel and the simulator/emulator is used to connect to that game channel. The game starts once both players are connected to the same game channel. Since the debug console was used to create the room, the first move is made in the debug console, followed by the simulator/emulator. The game ends once there is a winner or a draw. To learn how to test the app using the debug console, watch [this video](https://www.youtube.com/watch?v=i0DEuosFV0k).
-    2) The React app is already connected to the React Native app and is ready to play. To get started, clone the React App from the [repo](https://github.com/ocastroa/react-tutorial-tic-tac-toe):
+8) To test the app without having to open up another simulator/emulator, you can use the [React version](https://github.com/PubNubDevelopers/react-tutorial-tic-tac-toe.git) of this tic-tac-toe app. The React app is already connected to the React Native app and is ready to play. To get started, clone the React App from the repo.
     ```bash
-    git clone https://github.com/ocastroa/react-tutorial-tic-tac-toe.git
+    git clone https://github.com/PubNubDevelopers/react-tutorial-tic-tac-toe.git
     ```
     - Once you open the project, go to the file Game.js and in the constructor, add the same Pub/Sub keys you used for the React Native app. After, type the following command in the terminal to install the dependencies:
     ```bash
@@ -56,13 +52,9 @@ react-native run-android
     ```bash
     npm run
     ```
-    - The app will open in http://localhost:3000 with an empty table and two input fields. The React app will be used to join a channel (Note: The React app is currently set up to only join channels and not create them) and the simulator/emulator will be used to create a room channel. To see how to test the app using the React app, watch [this video](https://www.youtube.com/watch?v=0W6OqKiP7GM).
+    - The app will open in http://localhost:3000 with an empty table and two input fields. The React app will be used to join a channel (Note: The React app is currently set up to only join channels and not create them) and the simulator/emulator will be used to create a room channel.
 
 
 ## Build Your Own Realtime Tic Tac Toe Game in React Native
 
-To learn more about this project or if you want to build this project from scratch, check out the tutorial.
-
-  <a href="https://www.pubnub.com/blog/multiplayer-mobile-tic-tac-toe-react-native-ios-android-part-one/?devrel_gh=react-native-tictactoe">
-    <img alt="PubNub Blog" src="https://i.imgur.com/aJ927CO.png" width=260 height=98/>
-  </a>
+To learn more about this project or if you want to build this project from scratch, check out the [tutorial](https://www.pubnub.com/blog/multiplayer-mobile-tic-tac-toe-react-native-ios-android-part-one/).
